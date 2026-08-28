@@ -1,12 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./css/style.css">
     <title> Time flow</title>
 </head>
+
 <body>
-    
+    <section class="main">
+        <div class="steps" id="step-1">
+            <div class="img-form">
+                <img class="logo" src="./images/logo.png" alt="logo" height="200px">
+            </div>
+            <div class="img-form">
+                <p class="eyebrow">Step 1 out of 4</p>
+                <h1>Let's go to know you</h1>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">What do you do?</label>
+                    <select id="role" name="role" required>
+                        <option value="">Select your role</option>
+                        <option value="student">Student</option>
+                        <option value="job">Job</option>
+                        <option value="nothing">Nothing</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Where are you from?</label>
+                    <input type="text" id="location" name="location" placeholder="Enter your location" required>
+                </div>
+                <button type="submit">Continue →</button>
+            </div>
+
+        </div>
+
+        <div class="steps" id="step-2">
+            <div class="img-form">
+                <p class="eyebrow">Step 2 out of 4</p>
+                <h1>What are your priorities?</h1>
+                <div class="priority-grid">
+
+                    <label class="priority-card">
+                        <input type="checkbox" value="Learning">
+                        <span class="icon">📖</span>
+                        <span>Learning</span>
+                        <span class="check">✓</span>
+                    </label>
+
+                    <label class="priority-card">
+                        <input type="checkbox" value="Projects">
+                        <span class="icon">🚀</span>
+                        <span>Projects</span>
+                        <span class="check">✓</span>
+                    </label>
+
+                    <label class="priority-card">
+                        <input type="checkbox" value="Fitness">
+                        <span class="icon">🏋️</span>
+                        <span>Fitness</span>
+                        <span class="check">✓</span>
+                    </label>
+
+                    <label class="priority-card">
+                        <input type="checkbox" value="Study">
+                        <span class="icon">📖</span>
+                        <span>Study</span>
+                        <span class="check">✓</span>
+                    </label>
+
+                    <label class="priority-card">
+                        <input type="checkbox" value="Goals">
+                        <span class="icon">🎯</span>
+                        <span>Goals</span>
+                        <span class="check">✓</span>
+                    </label>
+
+                    <label class="priority-card">
+                        <input type="checkbox" value="Personal Growth">
+                        <span class="icon">🧘</span>
+                        <span>Personal<br>Growth</span>
+                        <span class="check">✓</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="steps" id="step-3">
+            <div class="img-form">
+                <p class="eyebrow">Step 3 out of 4</p>
+                <h1>Build your typical day</h1>
+                <div class="day-builder">
+                    <label for="wake-up">Wake up :</label>
+                    <input type="time" id="wake-up" name="wake-up" required>
+
+                    <label for="work">college / Work :</label>
+                    <input type="time" id="work" name="work" required>
+
+                    <label for="gym">Gym :</label>
+                    <input type="time" id="gym" name="gym" required>
+
+                    <label for="focus">Focus time:</label>
+                    <input type="time" id="focus" name="focus" required>
+
+                    <label for="sleep">Sleep :</label>
+                    <input type="time" id="sleep" name="sleep" required>
+                </div>
+                <button type="submit">Continue →</button>
+            </div>
+        </div>
+
+        <div class="steps" id="step-4">
+            <div class="img-form">
+                <p class="eyebrow">Step 4 out of 4</p>
+                <h1>Complete your setup</h1>
+                <h2>you're all set!</h2>
+
+                <button type="submit">Go to Dashboard →</button>
+            </div>
+
+        </div>
+    </section>
 </body>
+
 </html>

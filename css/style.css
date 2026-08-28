@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0%;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --dark: #524646;
+    --taupe: #A8A492;
+    --cream: #FCF2E5;
+    --orange: #EC5B38;
+}
+
+body {
+    background: var(--cream);
+    color: var(--dark);
+}
