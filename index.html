@@ -12,7 +12,7 @@
 
 <body>
     <section class="main">
-        <div class="steps" id="step-1">
+        <div class="steps active" id="step-1">
             <div class="img-form">
                 <img class="logo" src="./images/logo.png" alt="logo" height="200px">
             </div>
@@ -36,7 +36,9 @@
                     <label for="location">Where are you from?</label>
                     <input type="text" id="location" name="location" placeholder="Enter your location" required>
                 </div>
-                <button type="submit">Continue →</button>
+                <div class="btns">
+                    <button class="next-btn" type="button"> Continue → </button>
+                </div>
             </div>
 
         </div>
@@ -89,9 +91,13 @@
                         <span class="check">✓</span>
                     </label>
                 </div>
+                <div class="btns">
+                    <button class="back-btn" type="button"> ← Back </button>
+                    <button class="next-btn" type="button"> Continue → </button>
+                </div>
             </div>
         </div>
-        </div>
+
 
         <div class="steps" id="step-3">
             <div class="img-form">
@@ -113,7 +119,10 @@
                     <label for="sleep">Sleep :</label>
                     <input type="time" id="sleep" name="sleep" required>
                 </div>
-                <button type="submit">Continue →</button>
+                <div class="btns">
+                    <button class="back-btn" type="button"> ← Back </button>
+                    <button class="next-btn" type="button"> Continue → </button>
+                </div>
             </div>
         </div>
 
@@ -123,11 +132,16 @@
                 <h1>Complete your setup</h1>
                 <h2>you're all set!</h2>
 
-                <button type="submit">Go to Dashboard →</button>
+                <div class="btns">
+                    <button class="back-btn" type="button"> ← Back </button>
+                    <a class="next-btn" href="./pages/dashboard.html"> Go to Dashboard → </a>
+                </div>
             </div>
 
         </div>
     </section>
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
