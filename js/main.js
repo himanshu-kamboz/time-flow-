@@ -30,3 +30,45 @@ back.forEach(function (btn) {
     });
 });
 
+function saveInformation (){
+
+    let priorityCard = document.querySelectorAll(".priority-card");
+
+    let priorities = [];
+
+    priorityCard.forEach(function (card) {
+        if (card.classList.contains("selected")){
+            priorities.push(card.textContent.trim())
+        }
+    });
+
+    const user = {
+        name : document.getElementById("name").value.trim(),
+        role : document.getElementById("role").value.trim(),
+        location : document.getElementById("location").value.trim(),
+
+        priorities : priorities,
+
+        wakeUp : document.getElementById("wake-up").value.trim(),
+        work : document.getElementById("work").value.trim(),
+        gym : document.getElementById("gym").value.trim(),
+        focus : document.getElementById("focus").value.trim(),
+        sleep : document.getElementById("sleep").value.trim(),
+    };
+
+    localStorage.setItem("user", JSON.stringify(user));
+
+    console.log("saved info", user)
+}
+
+let dashboardBtn = document.getElementById("dashboard-btn");
+
+if (dashboardBtn) {
+    dashboardBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        saveInformation();
+
+        window.location.href = "./pages/dashboard.html";
+    });
+}
