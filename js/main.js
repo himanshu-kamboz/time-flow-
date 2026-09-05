@@ -18,7 +18,7 @@ next.forEach(function (btn) {
 });
 
 back.forEach(function (btn) {
-   
+
     btn.addEventListener("click", function () {
         let currentStep = document.getElementById(`step-${stepsCount}`);
         currentStep.classList.remove('active');
@@ -30,30 +30,30 @@ back.forEach(function (btn) {
     });
 });
 
-function saveInformation (){
+function saveInformation() {
 
     let priorityCard = document.querySelectorAll(".priority-card");
 
     let priorities = [];
 
     priorityCard.forEach(function (card) {
-        if (card.classList.contains("selected")){
+        if (card.classList.contains("selected")) {
             priorities.push(card.textContent.trim())
         }
     });
 
     const user = {
-        name : document.getElementById("name").value.trim(),
-        role : document.getElementById("role").value.trim(),
-        location : document.getElementById("location").value.trim(),
+        name: document.getElementById("name").value.trim(),
+        role: document.getElementById("role").value.trim(),
+        location: document.getElementById("location").value.trim(),
 
-        priorities : priorities,
+        priorities: priorities,
 
-        wakeUp : document.getElementById("wake-up").value.trim(),
-        work : document.getElementById("work").value.trim(),
-        gym : document.getElementById("gym").value.trim(),
-        focus : document.getElementById("focus").value.trim(),
-        sleep : document.getElementById("sleep").value.trim(),
+        wakeUp: document.getElementById("wake-up").value.trim(),
+        work: document.getElementById("work").value.trim(),
+        gym: document.getElementById("gym").value.trim(),
+        focus: document.getElementById("focus").value.trim(),
+        sleep: document.getElementById("sleep").value.trim(),
     };
 
     localStorage.setItem("user", JSON.stringify(user));
@@ -70,14 +70,25 @@ if (dashboardBtn) {
     });
 }
 
-const storedUser = JSON.parse(localStorage.getItem('user') || '{}');
-document.querySelectorAll('[data-user-name]').forEach((element) => { element.textContent = storedUser.name || 'there'; });
-document.querySelectorAll('[data-user-initials]').forEach((element) => { element.textContent = (storedUser.name || 'TF').split(' ').map((part) => part[0]).join('').slice(0, 2).toUpperCase(); });
-document.querySelectorAll('.task-row input').forEach((checkbox) => { checkbox.addEventListener('change', () => checkbox.closest('.task-row').classList.toggle('done', checkbox.checked)); });
-let timerInterval;
-let timerSeconds = 25 * 60;
-const timerDisplay = document.querySelector('[data-timer]');
-function renderTimer() { if (timerDisplay) timerDisplay.textContent = `${String(Math.floor(timerSeconds / 60)).padStart(2, '0')}:${String(timerSeconds % 60).padStart(2, '0')}`; }
-document.querySelector('[data-timer-start]')?.addEventListener('click', (event) => { if (timerInterval) { clearInterval(timerInterval); timerInterval = null; event.currentTarget.textContent = 'Start focus'; return; } event.currentTarget.textContent = 'Pause'; timerInterval = setInterval(() => { timerSeconds = Math.max(0, timerSeconds - 1); renderTimer(); if (!timerSeconds) clearInterval(timerInterval); }, 1000); });
-document.querySelector('[data-timer-reset]')?.addEventListener('click', () => { clearInterval(timerInterval); timerInterval = null; timerSeconds = 25 * 60; renderTimer(); });
-renderTimer();
+function updateTimeDate() {
+    const now = new Date();
+
+    const date = now.toLocaleDateString("en-IN", {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    });
+
+    const time = now.toLocaleTimeString("en-IN", {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true
+    });
+
+    document.getElementById("current-date").textContent = date;
+    document.getElementById("current-time").textContent = time;
+}
+
+updateTimeDate();
+
+setInterval(updateTimeDate,1000);

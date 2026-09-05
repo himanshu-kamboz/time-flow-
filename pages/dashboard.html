@@ -1,1 +1,349 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="../css/style.css"><title>Dashboard | TimeFlow</title></head><body class="app-body"><div class="app-shell"><aside class="sidebar"><a class="brand" href="dashboard.html"><img src="../images/logo.png" alt="TimeFlow"><span>TimeFlow</span></a><div class="nav-label">Workspace</div><nav class="app-nav"><a class="nav-link active" href="dashboard.html"><span>⌂</span><span>Dashboard</span></a><a class="nav-link" href="schedule.html"><span>◷</span><span>Schedule</span></a><a class="nav-link" href="tasks.html"><span>✓</span><span>Tasks</span></a><a class="nav-link" href="focus.html"><span>◉</span><span>Focus</span></a><a class="nav-link" href="analytics.html"><span>◌</span><span>Analytics</span></a><a class="nav-link" href="goals.html"><span>↗</span><span>Goals</span></a><a class="nav-link" href="habits.html"><span>⌁</span><span>Habits</span></a></nav><div class="sidebar-note"><strong>Small steps, daily.</strong>Your progress is built one focused block at a time.</div></aside><main class="app-content"><header class="topbar"><div><p class="greeting">Monday, September 5, 2026</p><h1 class="page-title">Good morning, <span data-user-name>there</span>.</h1></div><div class="top-actions"><span class="date-chip">◷ Today</span><button class="icon-button" aria-label="Notifications">♧</button><span class="avatar" data-user-initials>TF</span></div></header><section class="grid grid-3 stats-grid"><div class="stat-card"><span class="stat-label">Today's focus</span><div class="stat-value">3h 40m</div><span class="stat-detail">↑ 18% from yesterday</span></div><div class="stat-card"><span class="stat-label">Tasks completed</span><div class="stat-value">8 / 12</div><span class="stat-detail">67% complete</span></div><div class="stat-card"><span class="stat-label">Current streak</span><div class="stat-value">6 days</div><span class="stat-detail">Best: 12 days</span></div></section><div class="page-grid"><section class="panel"><div class="section-heading"><h2>Today's tasks</h2><a class="muted-link" href="tasks.html">View all</a></div><div class="task-list"><label class="task-row done"><input type="checkbox" checked><span>Review weekly priorities</span><small class="task-time">09:00</small></label><label class="task-row"><input type="checkbox"><span>Finish project proposal</span><small class="task-time">11:30</small></label><label class="task-row"><input type="checkbox"><span>30 minute workout</span><small class="task-time">17:00</small></label><label class="task-row"><input type="checkbox"><span>Plan tomorrow</span><small class="task-time">20:30</small></label></div></section><section class="panel"><div class="section-heading"><h2>Up next</h2><a class="muted-link" href="schedule.html">Full schedule</a></div><div class="timeline"><div class="timeline-row"><span class="timeline-time">10:00</span><i class="timeline-dot"></i><div class="timeline-event"><strong>Deep work</strong><span>Project proposal</span></div></div><div class="timeline-row"><span class="timeline-time">12:30</span><i class="timeline-dot"></i><div class="timeline-event"><strong>Lunch break</strong><span>Rest and reset</span></div></div><div class="timeline-row"><span class="timeline-time">17:00</span><i class="timeline-dot"></i><div class="timeline-event"><strong>Movement</strong><span>Gym session</span></div></div></div></section></div></main></div><script src="../js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Dashboard | TimeFlow</title>
+</head>
+
+<body class="app-body">
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="dashboard.html"><img src="../images/logo.png"
+                    alt="TimeFlow"><span>TimeFlow</span></a>
+            <div class="workspace-switcher"><span class="workspace-mark">T</span><span><b>Personal
+                        space</b><small>Private workspace</small></span><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m7 10 5 5 5-5" />
+                </svg></div>
+            <div class="nav-label">Workspace</div>
+            <nav class="app-nav">
+                <a class="nav-link active" href="dashboard.html"><svg viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="7" height="7" rx="1" />
+                        <rect x="14" y="3" width="7" height="7" rx="1" />
+                        <rect x="3" y="14" width="7" height="7" rx="1" />
+                        <rect x="14" y="14" width="7" height="7" rx="1" />
+                    </svg><span>Dashboard</span></a>
+                <a class="nav-link" href="schedule.html"><svg viewBox="0 0 24 24">
+                        <rect x="3" y="4" width="18" height="17" rx="2" />
+                        <path d="M16 2v4M8 2v4M3 10h18" />
+                    </svg><span>Schedule</span></a>
+                <a class="nav-link" href="tasks.html"><svg viewBox="0 0 24 24">
+                        <path d="m5 12 4 4L19 6" />
+                        <path d="M4 4h7M4 20h16" />
+                    </svg><span>Tasks</span></a>
+                <a class="nav-link" href="focus.html"><svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8" />
+                        <circle cx="12" cy="12" r="3" />
+                        <path d="M12 2v2M12 20v2M2 12h2M20 12h2" />
+                    </svg><span>Focus</span></a>
+                <a class="nav-link" href="analytics.html"><svg viewBox="0 0 24 24">
+                        <path d="M4 19V5M4 19h17" />
+                        <path d="m7 15 3-4 3 2 5-7" />
+                    </svg><span>Analytics</span></a>
+                <a class="nav-link" href="goals.html"><svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8" />
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="m16 8 4-4M16 4h4v4" />
+                    </svg><span>Goals</span></a>
+                <a class="nav-link" href="habits.html"><svg viewBox="0 0 24 24">
+                        <path d="M12 21a8 8 0 1 1 8-8c0 4-2 7-6 8" />
+                        <path d="M12 17v-5l3-3" />
+                    </svg><span>Habits</span></a>
+            </nav>
+            
+        </aside>
+        <main class="app-content">
+            <header class="topbar">
+                <div>
+                    <div class="time-date">
+                        <p id="current-date" class="greeting"></p>
+                        <p id="current-time" class="greeting"></p>
+                    </div>
+                    <h1 class="page-title">Good morning, <span data-user-name>there</span><span
+                            class="title-spark">✦</span></h1>
+                    <p class="page-subtitle">A clear plan creates a calm day. Here's your overview.</p>
+                </div>
+                <div class="top-actions"><button class="search-button" aria-label="Search"><svg viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="6.5" />
+                            <path d="m16 16 5 5" />
+                        </svg><span>Search</span><kbd>⌘ K</kbd></button><button class="icon-button"
+                        aria-label="Notifications"><svg viewBox="0 0 24 24">
+                            <path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" />
+                        </svg><i class="notification-dot"></i></button><button class="icon-button"
+                        aria-label="Settings"><svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19 13.5a1.8 1.8 0 0 0 0-3l-1-.2a6.5 6.5 0 0 0-.7-1.6l.5-.9a1.8 1.8 0 0 0-2.6-2.6l-.9.5a6.5 6.5 0 0 0-1.6-.7l-.2-1a1.8 1.8 0 0 0-3 0l-.2 1a6.5 6.5 0 0 0-1.6.7l-.9-.5a1.8 1.8 0 0 0-2.6 2.6l.5.9a6.5 6.5 0 0 0-.7 1.6l-1 .2a1.8 1.8 0 0 0 0 3l1 .2c.2.6.4 1.1.7 1.6l-.5.9a1.8 1.8 0 0 0 2.6 2.6l.9-.5c.5.3 1 .6 1.6.7l.2 1a1.8 1.8 0 0 0 3 0l.2-1c.6-.2 1.1-.4 1.6-.7l.9.5a1.8 1.8 0 0 0 2.6-2.6l-.5-.9c.3-.5.6-1 .7-1.6l1-.2Z" />
+                        </svg></button><span class="avatar" data-user-initials>TF</span></div>
+            </header>
+            <section class="status-strip">
+                <div class="status-copy"><span class="status-indicator"></span><span><strong>You're on a
+                            roll</strong><small>Keep your momentum going today.</small></span></div>
+                <div class="daily-progress">
+                    <div><span>Daily progress</span><b>68%</b></div>
+                    <div class="progress progress-light"><span class="width-68"></span></div>
+                </div><span class="date-chip"><svg viewBox="0 0 24 24">
+                        <rect x="3" y="4" width="18" height="17" rx="2" />
+                        <path d="M16 2v4M8 2v4M3 10h18" />
+                    </svg> Monday, Sep 5</span>
+            </section>
+            <section class="overview-section">
+                <div class="section-heading section-heading-large">
+                    <div><span class="section-kicker">At a glance</span>
+                        <h2>Productivity overview</h2>
+                    </div><button class="filter-button">This week <svg viewBox="0 0 24 24">
+                            <path d="m7 10 5 5 5-5" />
+                        </svg></button>
+                </div>
+                <div class="grid grid-3 grid-kpi">
+                    <article class="metric-card metric-primary">
+                        <div class="metric-top"><span class="metric-icon"><svg viewBox="0 0 24 24">
+                                    <path d="M12 3v9l6 3" />
+                                    <circle cx="12" cy="12" r="8.5" />
+                                </svg></span><span class="trend up">+18.4%</span></div><span class="stat-label">Today's
+                            productivity</span><strong class="metric-value">8.6<span>/10</span></strong>
+                        <div class="metric-spark"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                    </article>
+                    <article class="metric-card">
+                        <div class="metric-top"><span class="metric-icon icon-lilac"><svg viewBox="0 0 24 24">
+                                    <path d="m5 12 4 4L19 6" />
+                                    <circle cx="12" cy="12" r="9" />
+                                </svg></span><span class="trend up">+12.0%</span></div><span class="stat-label">Tasks
+                            completed</span><strong class="metric-value">18<span class="metric-unit">/24</span></strong>
+                        <div class="metric-progress"><span class="width-75"></span></div><small>6 tasks
+                            remaining</small>
+                    </article>
+                    <article class="metric-card">
+                        <div class="metric-top"><span class="metric-icon icon-blue"><svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="8" />
+                                    <path d="M12 7v5l3 2" />
+                                </svg></span><span class="trend up">+2h 10m</span></div><span class="stat-label">Focus
+                            time</span><strong class="metric-value">12<span class="metric-unit">h 40m</span></strong>
+                        <div class="metric-progress blue"><span class="width-64"></span></div><small>64% of weekly
+                            target</small>
+                    </article>
+                    <article class="metric-card">
+                        <div class="metric-top"><span class="metric-icon icon-amber"><svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 21c4-2 7-5 7-10 0-3-2-6-5-7 0 3-2 4-3 5-1-2-2-3-2-5-3 2-4 5-4 8 0 4 3 7 7 9Z" />
+                                </svg></span><span class="trend neutral">Best 12 days</span></div><span
+                            class="stat-label">Current streak</span><strong class="metric-value">6<span
+                                class="metric-unit"> days</span></strong>
+                        <div class="streak-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i
+                                class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+                    </article>
+                    <article class="metric-card">
+                        <div class="metric-top"><span class="metric-icon icon-pink"><svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="8" />
+                                    <circle cx="12" cy="12" r="4" />
+                                    <path d="m16 8 4-4" />
+                                </svg></span><span class="trend up">+8.2%</span></div><span class="stat-label">Goals
+                            progress</span><strong class="metric-value">72<span class="metric-unit">%</span></strong>
+                        <div class="metric-progress pink"><span class="width-72"></span></div><small>3 active
+                            goals</small>
+                    </article>
+                    <article class="metric-card">
+                        <div class="metric-top"><span class="metric-icon icon-green"><svg viewBox="0 0 24 24">
+                                    <path d="M12 21a8 8 0 1 1 8-8c0 4-2 7-6 8" />
+                                    <path d="M12 17v-5l3-3" />
+                                </svg></span><span class="trend up">+1 this week</span></div><span
+                            class="stat-label">Habits completed</span><strong class="metric-value">5<span
+                                class="metric-unit">/7</span></strong>
+                        <div class="metric-progress green"><span class="width-71"></span></div><small>71%
+                            consistency</small>
+                    </article>
+                </div>
+            </section>
+            <section class="dashboard-grid dashboard-grid-main">
+                <article class="panel chart-panel trend-panel">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Performance</span>
+                            <h2>Productivity trend</h2>
+                        </div><span class="trend up">↑ 14.6% vs last week</span>
+                    </div>
+                    <div class="line-chart">
+                        <div class="y-axis"><span>100</span><span>75</span><span>50</span><span>25</span><span>0</span>
+                        </div>
+                        <div class="chart-stage">
+                            <div class="grid-lines"><i></i><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 700 220"
+                                preserveAspectRatio="none" aria-label="Weekly productivity trend">
+                                <defs>
+                                    <linearGradient id="trendFill" x1="0" x2="0" y1="0" y2="1">
+                                        <stop offset="0" stop-color="#8d72e8" stop-opacity=".28" />
+                                        <stop offset="1" stop-color="#8d72e8" stop-opacity="0" />
+                                    </linearGradient>
+                                </defs>
+                                <path class="chart-area"
+                                    d="M0 174 C55 168 70 130 118 143 S178 101 232 122 S285 76 350 92 S410 118 465 83 S520 68 578 87 S640 45 700 54 L700 220 L0 220Z" />
+                                <path class="chart-line"
+                                    d="M0 174 C55 168 70 130 118 143 S178 101 232 122 S285 76 350 92 S410 118 465 83 S520 68 578 87 S640 45 700 54" />
+                                <circle cx="0" cy="174" r="4" />
+                                <circle cx="118" cy="143" r="4" />
+                                <circle cx="232" cy="122" r="4" />
+                                <circle cx="350" cy="92" r="4" />
+                                <circle cx="465" cy="83" r="4" />
+                                <circle cx="578" cy="87" r="4" />
+                                <circle cx="700" cy="54" r="5" />
+                            </svg>
+                            <div class="x-axis">
+                                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="panel focus-summary">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Deep work</span>
+                            <h2>Focus summary</h2>
+                        </div><a class="muted-link" href="focus.html">Open focus <svg viewBox="0 0 24 24">
+                                <path d="M5 12h14m-6-6 6 6-6 6" />
+                            </svg></a>
+                    </div>
+                    <div class="focus-ring">
+                        <div><strong>64%</strong><small>weekly goal</small></div>
+                    </div>
+                    <div class="focus-stats"><span><b>12h 40m</b><small>Total
+                                focus</small></span><span><b>14</b><small>Sessions</small></span><span><b>6
+                                days</b><small>Streak</small></span></div>
+                    <div class="focus-compare"><span>Compared to last week</span><b>+2h 10m</b></div>
+                </article>
+            </section>
+            <section class="dashboard-grid dashboard-grid-secondary">
+                <article class="panel chart-panel bar-panel">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Time tracking</span>
+                            <h2>Weekly focus</h2>
+                        </div><button class="icon-button small-button" aria-label="More options">•••</button>
+                    </div>
+                    <div class="bar-chart">
+                        <div class="bar-y"><span>4h</span><span>3h</span><span>2h</span><span>1h</span><span>0</span>
+                        </div>
+                        <div class="bar-stage">
+                            <div class="grid-lines"><i></i><i></i><i></i><i></i><i></i></div>
+                            <div class="bars">
+                                <div class="bar-col"><i class="bar-fill b-55"></i><span>Mon</span></div>
+                                <div class="bar-col"><i class="bar-fill b-72"></i><span>Tue</span></div>
+                                <div class="bar-col"><i class="bar-fill b-88 highlight"></i><span>Wed</span></div>
+                                <div class="bar-col"><i class="bar-fill b-65"></i><span>Thu</span></div>
+                                <div class="bar-col"><i class="bar-fill b-78"></i><span>Fri</span></div>
+                                <div class="bar-col"><i class="bar-fill b-45"></i><span>Sat</span></div>
+                                <div class="bar-col"><i class="bar-fill b-32"></i><span>Sun</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="panel donut-panel">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Workload</span>
+                            <h2>Time distribution</h2>
+                        </div>
+                    </div>
+                    <div class="donut-layout">
+                        <div class="donut donut-time">
+                            <div><b>24h</b><small>tracked</small></div>
+                        </div>
+                        <div class="legend"><span><i class="dot purple"></i>Work <b>42%</b></span><span><i
+                                    class="dot blue"></i>Study <b>22%</b></span><span><i class="dot green"></i>Exercise
+                                <b>12%</b></span><span><i class="dot amber"></i>Personal <b>14%</b></span><span><i
+                                    class="dot gray"></i>Rest <b>10%</b></span></div>
+                    </div>
+                </article>
+                <article class="panel donut-panel">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Execution</span>
+                            <h2>Task completion</h2>
+                        </div>
+                    </div>
+                    <div class="donut-layout">
+                        <div class="donut donut-tasks">
+                            <div><b>75%</b><small>complete</small></div>
+                        </div>
+                        <div class="legend"><span><i class="dot purple"></i>Completed <b>18</b></span><span><i
+                                    class="dot blue"></i>In progress <b>3</b></span><span><i
+                                    class="dot amber"></i>Pending <b>2</b></span><span><i class="dot red"></i>Overdue
+                                <b>1</b></span></div>
+                    </div>
+                </article>
+            </section>
+            <section class="dashboard-grid dashboard-grid-bottom">
+                <article class="panel schedule-panel">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Today · Monday, Sep 5</span>
+                            <h2>Today's schedule</h2>
+                        </div><a class="muted-link" href="schedule.html">View schedule <svg viewBox="0 0 24 24">
+                                <path d="M5 12h14m-6-6 6 6-6 6" />
+                            </svg></a>
+                    </div>
+                    <div class="schedule-list">
+                        <div class="schedule-item current"><time>09:00</time><span class="schedule-line"></span>
+                            <div class="schedule-icon purple-bg"><svg viewBox="0 0 24 24">
+                                    <path d="M4 18h16M6 15h12M8 12h8M10 9h4" />
+                                </svg></div>
+                            <div class="schedule-copy"><strong>Deep work</strong><span>Project proposal <em>·</em>
+                                    2h</span></div><b class="schedule-status active-status">In progress</b>
+                        </div>
+                        <div class="schedule-item"><time>11:00</time><span class="schedule-line"></span>
+                            <div class="schedule-icon blue-bg"><svg viewBox="0 0 24 24">
+                                    <path d="M7 4v4M17 4v4M5 10h14M7 20h10a2 2 0 0 0 2-2V6H5v12a2 2 0 0 0 2 2Z" />
+                                </svg></div>
+                            <div class="schedule-copy"><strong>Break</strong><span>Reset and recharge <em>·</em>
+                                    30m</span></div><b class="schedule-status">Upcoming</b>
+                        </div>
+                        <div class="schedule-item"><time>12:00</time><span class="schedule-line"></span>
+                            <div class="schedule-icon pink-bg"><svg viewBox="0 0 24 24">
+                                    <path d="M5 5h14v14H5zM8 9h8M8 13h5" />
+                                </svg></div>
+                            <div class="schedule-copy"><strong>Study session</strong><span>Read chapter 4 <em>·</em>
+                                    2h</span></div><b class="schedule-status">Upcoming</b>
+                        </div>
+                        <div class="schedule-item"><time>14:00</time><span class="schedule-line"></span>
+                            <div class="schedule-icon amber-bg"><svg viewBox="0 0 24 24">
+                                    <path d="M4 8h16M6 8v10h12V8M8 5h8v3H8zM9 12h6" />
+                                </svg></div>
+                            <div class="schedule-copy"><strong>Lunch</strong><span>Take a proper break <em>·</em>
+                                    1h</span></div><b class="schedule-status">Upcoming</b>
+                        </div>
+                        <div class="schedule-item"><time>17:00</time><span class="schedule-line"></span>
+                            <div class="schedule-icon green-bg"><svg viewBox="0 0 24 24">
+                                    <path d="M6 19h12M8 16l2-8m6 8-2-8M5 8h14" />
+                                </svg></div>
+                            <div class="schedule-copy"><strong>Exercise</strong><span>Gym session <em>·</em> 45m</span>
+                            </div><b class="schedule-status">Upcoming</b>
+                        </div>
+                    </div>
+                </article>
+                <article class="panel goals-panel">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Long-term direction</span>
+                            <h2>Goals progress</h2>
+                        </div><a class="muted-link" href="goals.html">View all</a>
+                    </div>
+                    <div class="featured-goal">
+                        <div class="goal-feature-top"><span class="goal-target"><svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="8" />
+                                    <circle cx="12" cy="12" r="4" />
+                                    <path d="m16 8 4-4" />
+                                </svg></span><span class="pill purple-pill">Featured</span></div><strong>Ship portfolio
+                            project</strong>
+                        <p>Make meaningful progress every week.</p>
+                        <div class="goal-progress-row">
+                            <div class="progress"><span class="width-68"></span></div><b>68%</b>
+                        </div><small>Due Oct 12, 2026</small>
+                    </div>
+                    <div class="mini-goal"><span>Read 12 books</span><b>42%</b>
+                        <div class="progress"><span class="width-42"></span></div>
+                    </div>
+                    <div class="mini-goal"><span>Build a consistent routine</span><b>76%</b>
+                        <div class="progress"><span class="width-76"></span></div>
+                    </div>
+                </article>
+            </section>
+            
+        </main>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

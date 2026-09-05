@@ -1,1 +1,154 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="../css/style.css"><title>Analytics | TimeFlow</title></head><body class="app-body"><div class="app-shell"><aside class="sidebar"><a class="brand" href="dashboard.html"><img src="../images/logo.png" alt="TimeFlow"><span>TimeFlow</span></a><div class="nav-label">Workspace</div><nav class="app-nav"><a class="nav-link" href="dashboard.html"><span>⌂</span><span>Dashboard</span></a><a class="nav-link" href="schedule.html"><span>◷</span><span>Schedule</span></a><a class="nav-link" href="tasks.html"><span>✓</span><span>Tasks</span></a><a class="nav-link" href="focus.html"><span>◉</span><span>Focus</span></a><a class="nav-link active" href="analytics.html"><span>◌</span><span>Analytics</span></a><a class="nav-link" href="goals.html"><span>↗</span><span>Goals</span></a><a class="nav-link" href="habits.html"><span>⌁</span><span>Habits</span></a></nav></aside><main class="app-content"><header class="topbar"><div><p class="greeting">Your rhythm at a glance</p><h1 class="page-title">Analytics</h1></div><span class="date-chip">Last 7 days</span></header><section class="grid grid-3 stats-grid"><div class="stat-card"><span class="stat-label">Focus time</span><div class="stat-value">18h 25m</div><span class="stat-detail">↑ 12% this week</span></div><div class="stat-card"><span class="stat-label">Completion rate</span><div class="stat-value">82%</div><span class="stat-detail">↑ 6% this week</span></div><div class="stat-card"><span class="stat-label">Deep work sessions</span><div class="stat-value">14</div><span class="stat-detail">2 more than last week</span></div></section><section class="panel"><div class="section-heading"><h2>Focus time this week</h2><span class="pill">18h 25m total</span></div><div class="chart"><i class="bar width-48"></i><i class="bar width-70"></i><i class="bar highlight width-86"></i><i class="bar width-62"></i><i class="bar width-78"></i><i class="bar width-55"></i><i class="bar width-34"></i></div><div class="chart-labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></section></main></div><script src="../js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Analytics | TimeFlow</title>
+</head>
+
+<body class="app-body">
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="dashboard.html"><img src="../images/logo.png"
+                    alt="TimeFlow"><span>TimeFlow</span></a>
+            <div class="workspace-switcher"><span class="workspace-mark">T</span><span><b>Personal
+                        space</b><small>Private workspace</small></span><svg viewBox="0 0 24 24">
+                    <path d="m7 10 5 5 5-5" />
+                </svg></div>
+            <div class="nav-label">Workspace</div>
+            <nav class="app-nav"><a class="nav-link" href="dashboard.html"><svg viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="7" height="7" rx="1" />
+                        <rect x="14" y="3" width="7" height="7" rx="1" />
+                        <rect x="3" y="14" width="7" height="7" rx="1" />
+                        <rect x="14" y="14" width="7" height="7" rx="1" />
+                    </svg><span>Dashboard</span></a><a class="nav-link" href="schedule.html"><svg viewBox="0 0 24 24">
+                        <rect x="3" y="4" width="18" height="17" rx="2" />
+                        <path d="M16 2v4M8 2v4M3 10h18" />
+                    </svg><span>Schedule</span></a><a class="nav-link" href="tasks.html"><svg viewBox="0 0 24 24">
+                        <path d="m5 12 4 4L19 6" />
+                        <path d="M4 4h7M4 20h16" />
+                    </svg><span>Tasks</span></a><a class="nav-link" href="focus.html"><svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg><span>Focus</span></a><a class="nav-link active" href="analytics.html"><svg
+                        viewBox="0 0 24 24">
+                        <path d="M4 19V5M4 19h17M7 15l3-4 3 2 5-7" />
+                    </svg><span>Analytics</span></a><a class="nav-link" href="goals.html"><svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8" />
+                        <circle cx="12" cy="12" r="4" />
+                    </svg><span>Goals</span></a><a class="nav-link" href="habits.html"><svg viewBox="0 0 24 24">
+                        <path d="M12 21a8 8 0 1 1 8-8c0 4-2 7-6 8M12 17v-5l3-3" />
+                    </svg><span>Habits</span></a></nav>
+        </aside>
+        <main class="app-content">
+            <header class="topbar">
+                <div>
+                    <div class="time-date">
+                        <p id="current-date" class="greeting"></p>
+                        <p id="current-time" class="greeting"></p>
+                    </div>
+                    <p class="greeting">Your rhythm at a glance</p>
+                    <h1 class="page-title">Analytics</h1>
+                </div><span class="date-chip">Last 7 days</span>
+            </header>
+            <section class="grid grid-3 stats-grid">
+                <div class="stat-card"><span class="stat-label">Focus time</span>
+                    <div class="stat-value">18h 25m</div><span class="stat-detail">↑ 12% this week</span>
+                </div>
+                <div class="stat-card"><span class="stat-label">Completion rate</span>
+                    <div class="stat-value">82%</div><span class="stat-detail">↑ 6% this week</span>
+                </div>
+                <div class="stat-card"><span class="stat-label">Deep work sessions</span>
+                    <div class="stat-value">14</div><span class="stat-detail">2 more than last week</span>
+                </div>
+            </section>
+            <section class="panel">
+                <div class="section-heading">
+                    <h2>Focus time this week</h2><span class="pill">18h 25m total</span>
+                </div>
+                <div class="chart"><i class="bar width-48"></i><i class="bar width-70"></i><i
+                        class="bar highlight width-86"></i><i class="bar width-62"></i><i class="bar width-78"></i><i
+                        class="bar width-55"></i><i class="bar width-34"></i></div>
+                <div class="chart-labels">
+                    <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                </div>
+            </section>
+            <section class="analytics-grid">
+                <article class="panel analytics-score">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Your signal</span>
+                            <h2>Productivity score</h2>
+                        </div><span class="trend up">+14.6%</span>
+                    </div>
+                    <div class="score-ring"><strong>8.6</strong><small>out of 10</small></div>
+                    <p>You're performing above your weekly average.</p>
+                    <div class="score-meta">
+                        <span><b>82%</b><small>Consistency</small></span><span><b>14</b><small>Sessions</small></span><span><b>6d</b><small>Best
+                                streak</small></span>
+                    </div>
+                </article>
+                <article class="panel analytics-line">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Momentum</span>
+                            <h2>Daily productivity</h2>
+                        </div><span class="pill">This week</span>
+                    </div>
+                    <div class="mini-line-chart">
+                        <div class="mini-line-grid"><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 520 150"
+                            preserveAspectRatio="none">
+                            <path class="chart-area"
+                                d="M0 118 C40 112 62 78 92 92 S145 58 182 75 S220 40 260 58 S315 70 350 47 S405 68 445 34 S485 45 520 20 L520 150 L0 150Z" />
+                            <path class="chart-line"
+                                d="M0 118 C40 112 62 78 92 92 S145 58 182 75 S220 40 260 58 S315 70 350 47 S405 68 445 34 S485 45 520 20" />
+                        </svg>
+                        <div class="mini-line-labels">
+                            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="panel analytics-breakdown">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Efficiency</span>
+                            <h2>Focus efficiency</h2>
+                        </div>
+                    </div><strong class="big-stat">84<span>%</span></strong><span class="trend up">↑ 9% from last
+                        week</span>
+                    <div class="efficiency-bars"><span class="efficiency-deep"><i>Deep work</i><b>82%</b></span><span
+                            class="efficiency-planning"><i>Planning</i><b>68%</b></span><span
+                            class="efficiency-admin"><i>Admin</i><b>54%</b></span><span
+                            class="efficiency-study"><i>Study</i><b>74%</b></span></div>
+                </article>
+                <article class="panel analytics-heat">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Consistency</span>
+                            <h2>Activity heatmap</h2>
+                        </div><span
+                            class="heat-legend"><small>Less</small><i></i><i></i><i></i><i></i><small>More</small></span>
+                    </div>
+                    <div class="heatmap analytics-heatmap">
+                        <div class="heat-days">
+                            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                        </div>
+                        <div class="heat-grid"><i class="h1"></i><i class="h2"></i><i class="h3"></i><i
+                                class="h1"></i><i class="h4"></i><i class="h2"></i><i class="h0"></i><i
+                                class="h2"></i><i class="h3"></i><i class="h4"></i><i class="h2"></i><i
+                                class="h4"></i><i class="h3"></i><i class="h1"></i><i class="h3"></i><i
+                                class="h4"></i><i class="h2"></i><i class="h4"></i><i class="h4"></i><i
+                                class="h3"></i><i class="h2"></i><i class="h4"></i><i class="h3"></i><i
+                                class="h1"></i><i class="h2"></i><i class="h0"></i><i class="h3"></i><i
+                                class="h4"></i><i class="h2"></i><i class="h3"></i><i class="h4"></i><i
+                                class="h1"></i><i class="h2"></i><i class="h4"></i><i class="h3"></i><i
+                                class="h2"></i><i class="h1"></i><i class="h4"></i><i class="h3"></i><i
+                                class="h2"></i><i class="h4"></i><i class="h4"></i><i class="h1"></i><i
+                                class="h2"></i><i class="h3"></i><i class="h4"></i><i class="h2"></i><i
+                                class="h1"></i><i class="h3"></i><i class="h4"></i></div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

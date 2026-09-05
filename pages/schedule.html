@@ -1,1 +1,139 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="../css/style.css"><title>Schedule | TimeFlow</title></head><body class="app-body"><div class="app-shell"><aside class="sidebar"><a class="brand" href="dashboard.html"><img src="../images/logo.png" alt="TimeFlow"><span>TimeFlow</span></a><div class="nav-label">Workspace</div><nav class="app-nav"><a class="nav-link" href="dashboard.html"><span>⌂</span><span>Dashboard</span></a><a class="nav-link active" href="schedule.html"><span>◷</span><span>Schedule</span></a><a class="nav-link" href="tasks.html"><span>✓</span><span>Tasks</span></a><a class="nav-link" href="focus.html"><span>◉</span><span>Focus</span></a><a class="nav-link" href="analytics.html"><span>◌</span><span>Analytics</span></a><a class="nav-link" href="goals.html"><span>↗</span><span>Goals</span></a><a class="nav-link" href="habits.html"><span>⌁</span><span>Habits</span></a></nav></aside><main class="app-content"><header class="topbar"><div><p class="greeting">Monday, September 5, 2026</p><h1 class="page-title">Schedule</h1></div><button class="button-primary">＋ Add block</button></header><section class="panel"><div class="section-heading"><h2>Monday, September 5</h2><span class="pill">Today</span></div><div class="timeline"><div class="timeline-row"><span class="timeline-time">07:00</span><i class="timeline-dot"></i><div class="timeline-event"><strong>Morning routine</strong><span>Start the day slowly</span></div></div><div class="timeline-row"><span class="timeline-time">10:00</span><i class="timeline-dot"></i><div class="timeline-event"><strong>Deep work</strong><span>Project proposal · 90 min</span></div></div><div class="timeline-row"><span class="timeline-time">12:30</span><i class="timeline-dot"></i><div class="timeline-event"><strong>Lunch break</strong><span>Rest and reset</span></div></div><div class="timeline-row"><span class="timeline-time">17:00</span><i class="timeline-dot"></i><div class="timeline-event"><strong>Movement</strong><span>Gym session · 45 min</span></div></div><div class="timeline-row"><span class="timeline-time">20:30</span><i class="timeline-dot"></i><div class="timeline-event"><strong>Evening reset</strong><span>Plan tomorrow</span></div></div></div></section></main></div><script src="../js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Schedule | TimeFlow</title>
+</head>
+
+<body class="app-body">
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="dashboard.html"><img src="../images/logo.png"
+                    alt="TimeFlow"><span>TimeFlow</span></a>
+            <div class="workspace-switcher"><span class="workspace-mark">T</span><span><b>Personal
+                        space</b><small>Private workspace</small></span><svg viewBox="0 0 24 24">
+                    <path d="m7 10 5 5 5-5" />
+                </svg></div>
+            <div class="nav-label">Workspace</div>
+            <nav class="app-nav"><a class="nav-link" href="dashboard.html"><svg viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="7" height="7" rx="1" />
+                        <rect x="14" y="3" width="7" height="7" rx="1" />
+                        <rect x="3" y="14" width="7" height="7" rx="1" />
+                        <rect x="14" y="14" width="7" height="7" rx="1" />
+                    </svg><span>Dashboard</span></a><a class="nav-link active" href="schedule.html"><svg
+                        viewBox="0 0 24 24">
+                        <rect x="3" y="4" width="18" height="17" rx="2" />
+                        <path d="M16 2v4M8 2v4M3 10h18" />
+                    </svg><span>Schedule</span></a><a class="nav-link" href="tasks.html"><svg viewBox="0 0 24 24">
+                        <path d="m5 12 4 4L19 6" />
+                        <path d="M4 4h7M4 20h16" />
+                    </svg><span>Tasks</span></a><a class="nav-link" href="focus.html"><svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg><span>Focus</span></a><a class="nav-link" href="analytics.html"><svg viewBox="0 0 24 24">
+                        <path d="M4 19V5M4 19h17M7 15l3-4 3 2 5-7" />
+                    </svg><span>Analytics</span></a><a class="nav-link" href="goals.html"><svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8" />
+                        <circle cx="12" cy="12" r="4" />
+                    </svg><span>Goals</span></a><a class="nav-link" href="habits.html"><svg viewBox="0 0 24 24">
+                        <path d="M12 21a8 8 0 1 1 8-8c0 4-2 7-6 8M12 17v-5l3-3" />
+                    </svg><span>Habits</span></a></nav>
+        </aside>
+        <main class="app-content">
+            <header class="topbar">
+                <div>
+                    <div class="time-date">
+                        <p id="current-date" class="greeting"></p>
+                        <p id="current-time" class="greeting"></p>
+                    </div>
+                    <h1 class="page-title">Schedule</h1>
+                </div><button class="button-primary">＋ Add block</button>
+            </header>
+            <section class="status-strip route-status">
+                <div class="status-copy"><span class="status-indicator"></span><span><strong>5 blocks planned
+                            today</strong><small>Your day has room for focus, recovery, and movement.</small></span>
+                </div>
+                <div class="daily-progress">
+                    <div><span>Schedule filled</span><b>68%</b></div>
+                    <div class="progress progress-light"><span class="width-68"></span></div>
+                </div><span class="pill">8h 30m planned</span>
+            </section>
+            <section class="panel">
+                <div class="section-heading">
+                    <h2>Monday, September 5</h2><span class="pill">Today</span>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-row"><span class="timeline-time">07:00</span><i class="timeline-dot"></i>
+                        <div class="timeline-event"><strong>Morning routine</strong><span>Start the day slowly</span>
+                        </div>
+                    </div>
+                    <div class="timeline-row"><span class="timeline-time">10:00</span><i class="timeline-dot"></i>
+                        <div class="timeline-event"><strong>Deep work</strong><span>Project proposal · 90 min</span>
+                        </div>
+                    </div>
+                    <div class="timeline-row"><span class="timeline-time">12:30</span><i class="timeline-dot"></i>
+                        <div class="timeline-event"><strong>Lunch break</strong><span>Rest and reset</span></div>
+                    </div>
+                    <div class="timeline-row"><span class="timeline-time">17:00</span><i class="timeline-dot"></i>
+                        <div class="timeline-event"><strong>Movement</strong><span>Gym session · 45 min</span></div>
+                    </div>
+                    <div class="timeline-row"><span class="timeline-time">20:30</span><i class="timeline-dot"></i>
+                        <div class="timeline-event"><strong>Evening reset</strong><span>Plan tomorrow</span></div>
+                    </div>
+                </div>
+            </section>
+            <section class="schedule-dashboard-grid">
+                <article class="panel day-overview">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Your day</span>
+                            <h2>Schedule overview</h2>
+                        </div><span class="pill">5 blocks</span>
+                    </div>
+                    <div class="day-track">
+                        <div><b>07:00</b><i class="track-green"></i><span>Morning routine</span></div>
+                        <div><b>10:00</b><i class="track-purple"></i><span>Deep work</span></div>
+                        <div><b>12:30</b><i class="track-blue"></i><span>Lunch break</span></div>
+                        <div><b>17:00</b><i class="track-amber"></i><span>Movement</span></div>
+                    </div>
+                    <div class="schedule-footer"><span><b>8h 30m</b> planned</span><span><b>3h 40m</b>
+                            focused</span><span><b>68%</b> complete</span></div>
+                </article>
+                <article class="panel calendar-card">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Planning</span>
+                            <h2>September 2026</h2>
+                        </div><button class="icon-button small-button">‹</button>
+                    </div>
+                    <div class="calendar-head">
+                        <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+                    </div>
+                    <div class="calendar-grid">
+                        <i></i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>10</i><i>11</i><i
+                            class="selected">12</i><i>13</i><i>14</i><i>15</i><i>16</i><i>17</i><i>18</i><i>19</i><i>20</i><i>21</i><i>22</i><i>23</i><i>24</i><i>25</i><i>26</i><i>27</i><i>28</i><i>29</i><i>30</i>
+                    </div>
+                </article>
+            </section>
+            <section class="panel week-strip">
+                <div class="section-heading">
+                    <div><span class="section-kicker">Planning horizon</span>
+                        <h2>This week</h2>
+                    </div><span class="muted-link">18h 25m scheduled</span>
+                </div>
+                <div class="week-days">
+                    <div><small>Mon</small><b>5</b><em class="today-dot"></em></div>
+                    <div><small>Tue</small><b>6</b></div>
+                    <div><small>Wed</small><b>7</b></div>
+                    <div><small>Thu</small><b>8</b></div>
+                    <div><small>Fri</small><b>9</b></div>
+                    <div><small>Sat</small><b>10</b></div>
+                    <div><small>Sun</small><b>11</b></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

@@ -12,18 +12,41 @@
     <div class="app-shell">
         <aside class="sidebar"><a class="brand" href="dashboard.html"><img src="../images/logo.png"
                     alt="TimeFlow"><span>TimeFlow</span></a>
+            <div class="workspace-switcher"><span class="workspace-mark">T</span><span><b>Personal
+                        space</b><small>Private workspace</small></span><svg viewBox="0 0 24 24">
+                    <path d="m7 10 5 5 5-5" />
+                </svg></div>
             <div class="nav-label">Workspace</div>
-            <nav class="app-nav"><a class="nav-link" href="dashboard.html"><span>⌂</span><span>Dashboard</span></a><a
-                    class="nav-link" href="schedule.html"><span>◷</span><span>Schedule</span></a><a class="nav-link"
-                    href="tasks.html"><span>✓</span><span>Tasks</span></a><a class="nav-link"
-                    href="focus.html"><span>◉</span><span>Focus</span></a><a class="nav-link"
-                    href="analytics.html"><span>◌</span><span>Analytics</span></a><a class="nav-link"
-                    href="goals.html"><span>↗</span><span>Goals</span></a><a class="nav-link active"
-                    href="habits.html"><span>⌁</span><span>Habits</span></a></nav>
+            <nav class="app-nav"><a class="nav-link" href="dashboard.html"><svg viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="7" height="7" rx="1" />
+                        <rect x="14" y="3" width="7" height="7" rx="1" />
+                        <rect x="3" y="14" width="7" height="7" rx="1" />
+                        <rect x="14" y="14" width="7" height="7" rx="1" />
+                    </svg><span>Dashboard</span></a><a class="nav-link" href="schedule.html"><svg viewBox="0 0 24 24">
+                        <rect x="3" y="4" width="18" height="17" rx="2" />
+                        <path d="M16 2v4M8 2v4M3 10h18" />
+                    </svg><span>Schedule</span></a><a class="nav-link" href="tasks.html"><svg viewBox="0 0 24 24">
+                        <path d="m5 12 4 4L19 6" />
+                        <path d="M4 4h7M4 20h16" />
+                    </svg><span>Tasks</span></a><a class="nav-link" href="focus.html"><svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg><span>Focus</span></a><a class="nav-link" href="analytics.html"><svg viewBox="0 0 24 24">
+                        <path d="M4 19V5M4 19h17M7 15l3-4 3 2 5-7" />
+                    </svg><span>Analytics</span></a><a class="nav-link" href="goals.html"><svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8" />
+                        <circle cx="12" cy="12" r="4" />
+                    </svg><span>Goals</span></a><a class="nav-link active" href="habits.html"><svg viewBox="0 0 24 24">
+                        <path d="M12 21a8 8 0 1 1 8-8c0 4-2 7-6 8M12 17v-5l3-3" />
+                    </svg><span>Habits</span></a></nav>
         </aside>
         <main class="app-content">
             <header class="topbar">
                 <div>
+                    <div class="time-date">
+                        <p id="current-date" class="greeting"></p>
+                        <p id="current-time" class="greeting"></p>
+                    </div>
                     <p class="greeting">Consistency compounds</p>
                     <h1 class="page-title">Habits</h1>
                 </div><button class="button-primary">＋ Add habit</button>
@@ -44,6 +67,39 @@
                     <div class="progress width-57"><span></span></div>
                     <div class="goal-meta"><span>3 day streak</span><span>Due tonight</span></div>
                 </div>
+            </section>
+            <section class="habits-dashboard-grid">
+                <article class="panel habit-week-card">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Weekly rhythm</span>
+                            <h2>Habit consistency</h2>
+                        </div><span class="trend up">71% this week</span>
+                    </div>
+                    <div class="habit-calendar-head">
+                        <span>Habit</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                    </div>
+                    <div class="habit-calendar-row"><strong>Morning movement</strong><i class="done"></i><i
+                            class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i
+                            class="done"></i><i></i></div>
+                    <div class="habit-calendar-row"><strong>Read 20 minutes</strong><i class="done"></i><i
+                            class="done"></i><i></i><i class="done"></i><i class="done"></i><i class="done"></i><i></i>
+                    </div>
+                    <div class="habit-calendar-row"><strong>Plan tomorrow</strong><i class="done"></i><i></i><i
+                            class="done"></i><i class="done"></i><i></i><i class="done"></i><i></i></div>
+                </article>
+                <article class="panel habit-streak-card">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Momentum</span>
+                            <h2>Streaks</h2>
+                        </div>
+                    </div>
+                    <div class="streak-feature"><strong>6</strong><span>day best streak</span>
+                        <div class="streak-dots large"><i class="on"></i><i class="on"></i><i class="on"></i><i
+                                class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+                    </div>
+                    <div class="habit-stat"><span>Completion rate</span><b>71%</b></div>
+                    <div class="habit-stat"><span>Habits active</span><b>3</b></div>
+                </article>
             </section>
         </main>
     </div>

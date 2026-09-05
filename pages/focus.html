@@ -12,22 +12,53 @@
     <div class="app-shell">
         <aside class="sidebar"><a class="brand" href="dashboard.html"><img src="../images/logo.png"
                     alt="TimeFlow"><span>TimeFlow</span></a>
+            <div class="workspace-switcher"><span class="workspace-mark">T</span><span><b>Personal
+                        space</b><small>Private workspace</small></span><svg viewBox="0 0 24 24">
+                    <path d="m7 10 5 5 5-5" />
+                </svg></div>
             <div class="nav-label">Workspace</div>
-            <nav class="app-nav"><a class="nav-link" href="dashboard.html"><span>⌂</span><span>Dashboard</span></a><a
-                    class="nav-link" href="schedule.html"><span>◷</span><span>Schedule</span></a><a class="nav-link"
-                    href="tasks.html"><span>✓</span><span>Tasks</span></a><a class="nav-link active"
-                    href="focus.html"><span>◉</span><span>Focus</span></a><a class="nav-link"
-                    href="analytics.html"><span>◌</span><span>Analytics</span></a><a class="nav-link"
-                    href="goals.html"><span>↗</span><span>Goals</span></a><a class="nav-link"
-                    href="habits.html"><span>⌁</span><span>Habits</span></a></nav>
+            <nav class="app-nav"><a class="nav-link" href="dashboard.html"><svg viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="7" height="7" rx="1" />
+                        <rect x="14" y="3" width="7" height="7" rx="1" />
+                        <rect x="3" y="14" width="7" height="7" rx="1" />
+                        <rect x="14" y="14" width="7" height="7" rx="1" />
+                    </svg><span>Dashboard</span></a><a class="nav-link" href="schedule.html"><svg viewBox="0 0 24 24">
+                        <rect x="3" y="4" width="18" height="17" rx="2" />
+                        <path d="M16 2v4M8 2v4M3 10h18" />
+                    </svg><span>Schedule</span></a><a class="nav-link" href="tasks.html"><svg viewBox="0 0 24 24">
+                        <path d="m5 12 4 4L19 6" />
+                        <path d="M4 4h7M4 20h16" />
+                    </svg><span>Tasks</span></a><a class="nav-link active" href="focus.html"><svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg><span>Focus</span></a><a class="nav-link" href="analytics.html"><svg viewBox="0 0 24 24">
+                        <path d="M4 19V5M4 19h17M7 15l3-4 3 2 5-7" />
+                    </svg><span>Analytics</span></a><a class="nav-link" href="goals.html"><svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8" />
+                        <circle cx="12" cy="12" r="4" />
+                    </svg><span>Goals</span></a><a class="nav-link" href="habits.html"><svg viewBox="0 0 24 24">
+                        <path d="M12 21a8 8 0 1 1 8-8c0 4-2 7-6 8M12 17v-5l3-3" />
+                    </svg><span>Habits</span></a></nav>
         </aside>
         <main class="app-content">
             <header class="topbar">
                 <div>
+                    <div class="time-date">
+                        <p id="current-date" class="greeting"></p>
+                        <p id="current-time" class="greeting"></p>
+                    </div>
                     <p class="greeting">A quiet space for meaningful work</p>
                     <h1 class="page-title">Focus timer</h1>
                 </div>
             </header>
+            <section class="status-strip route-status">
+                <div class="status-copy"><span class="status-indicator"></span><span><strong>Ready for a focused
+                            block</strong><small>Your next session is queued and distraction-free.</small></span></div>
+                <div class="daily-progress">
+                    <div><span>Focus target</span><b>64%</b></div>
+                    <div class="progress progress-light"><span class="width-64"></span></div>
+                </div><span class="pill purple-pill">14 sessions this week</span>
+            </section>
             <div class="page-grid">
                 <section class="panel">
                     <div class="section-heading">
@@ -46,6 +77,58 @@
                     <div class="progress focus-progress"><span></span></div>
                 </section>
             </div>
+            <section class="focus-dashboard-grid">
+                <article class="panel focus-session-card">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Current session</span>
+                            <h2>Project proposal</h2>
+                        </div><span class="pill orange">Deep work</span>
+                    </div>
+                    <div class="focus-session-ring">
+                        <div><strong>25:00</strong><small>ready to begin</small></div>
+                    </div>
+                    <div class="focus-session-actions"><button class="button-primary" data-timer-start>Start
+                            focus</button><button class="button-secondary" data-timer-reset>Reset session</button></div>
+                    <p class="focus-note">Silence notifications and make this block count.</p>
+                </article>
+                <article class="panel focus-insights">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Your rhythm</span>
+                            <h2>Focus insights</h2>
+                        </div>
+                    </div>
+                    <div class="insight-row"><span class="metric-icon icon-lilac">◷</span>
+                        <div><b>12h 40m</b><small>Total this week</small></div><span class="trend up">+20%</span>
+                    </div>
+                    <div class="insight-row"><span class="metric-icon icon-blue">◌</span>
+                        <div><b>14 sessions</b><small>Completed this week</small></div><span class="trend up">+3</span>
+                    </div>
+                    <div class="insight-row"><span class="metric-icon icon-amber">✦</span>
+                        <div><b>54 minutes</b><small>Average session</small></div><span
+                            class="trend neutral">Typical</span>
+                    </div>
+                    <div class="focus-week-bars"><i class="b-55"></i><i class="b-72"></i><i class="b-88"></i><i
+                            class="b-65"></i><i class="b-78"></i><i class="b-45"></i><i class="b-32"></i></div>
+                    <div class="chart-labels">
+                        <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+                    </div>
+                </article>
+            </section>
+            <section class="panel focus-queue">
+                <div class="section-heading">
+                    <div><span class="section-kicker">Next up</span>
+                        <h2>Focus queue</h2>
+                    </div><a class="muted-link" href="tasks.html">View tasks</a>
+                </div>
+                <div class="queue-grid">
+                    <div><span class="queue-number">01</span><strong>Finish project proposal</strong><small>90 minutes ·
+                            High priority</small></div>
+                    <div><span class="queue-number">02</span><strong>Read chapter 4</strong><small>45 minutes ·
+                            Study</small></div>
+                    <div><span class="queue-number">03</span><strong>Plan tomorrow</strong><small>20 minutes ·
+                            Personal</small></div>
+                </div>
+            </section>
         </main>
     </div>
     <script src="../js/main.js"></script>

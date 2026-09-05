@@ -1,1 +1,145 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="../css/style.css"><title>Tasks | TimeFlow</title></head><body class="app-body"><div class="app-shell"><aside class="sidebar"><a class="brand" href="dashboard.html"><img src="../images/logo.png" alt="TimeFlow"><span>TimeFlow</span></a><div class="nav-label">Workspace</div><nav class="app-nav"><a class="nav-link" href="dashboard.html"><span>⌂</span><span>Dashboard</span></a><a class="nav-link" href="schedule.html"><span>◷</span><span>Schedule</span></a><a class="nav-link active" href="tasks.html"><span>✓</span><span>Tasks</span></a><a class="nav-link" href="focus.html"><span>◉</span><span>Focus</span></a><a class="nav-link" href="analytics.html"><span>◌</span><span>Analytics</span></a><a class="nav-link" href="goals.html"><span>↗</span><span>Goals</span></a><a class="nav-link" href="habits.html"><span>⌁</span><span>Habits</span></a></nav></aside><main class="app-content"><header class="topbar"><div><p class="greeting">Monday, September 5, 2026</p><h1 class="page-title">Tasks</h1></div><button class="button-primary">＋ Add task</button></header><section class="panel"><div class="section-heading"><h2>Today <span class="pill orange">4 tasks</span></h2><span class="muted-link">67% complete</span></div><div class="task-list"><label class="task-row done"><input type="checkbox" checked><span>Review weekly priorities</span><small class="task-time">09:00 · Planning</small></label><label class="task-row"><input type="checkbox"><span>Finish project proposal</span><small class="task-time">11:30 · Work</small></label><label class="task-row"><input type="checkbox"><span>30 minute workout</span><small class="task-time">17:00 · Health</small></label><label class="task-row"><input type="checkbox"><span>Plan tomorrow</span><small class="task-time">20:30 · Personal</small></label></div></section></main></div><script src="../js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Tasks | TimeFlow</title>
+</head>
+
+<body class="app-body">
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="dashboard.html"><img src="../images/logo.png"
+                    alt="TimeFlow"><span>TimeFlow</span></a>
+            <div class="workspace-switcher"><span class="workspace-mark">T</span><span><b>Personal
+                        space</b><small>Private workspace</small></span><svg viewBox="0 0 24 24">
+                    <path d="m7 10 5 5 5-5" />
+                </svg></div>
+            <div class="nav-label">Workspace</div>
+            <nav class="app-nav"><a class="nav-link" href="dashboard.html"><svg viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="7" height="7" rx="1" />
+                        <rect x="14" y="3" width="7" height="7" rx="1" />
+                        <rect x="3" y="14" width="7" height="7" rx="1" />
+                        <rect x="14" y="14" width="7" height="7" rx="1" />
+                    </svg><span>Dashboard</span></a><a class="nav-link" href="schedule.html"><svg viewBox="0 0 24 24">
+                        <rect x="3" y="4" width="18" height="17" rx="2" />
+                        <path d="M16 2v4M8 2v4M3 10h18" />
+                    </svg><span>Schedule</span></a><a class="nav-link active" href="tasks.html"><svg
+                        viewBox="0 0 24 24">
+                        <path d="m5 12 4 4L19 6" />
+                        <path d="M4 4h7M4 20h16" />
+                    </svg><span>Tasks</span></a><a class="nav-link" href="focus.html"><svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg><span>Focus</span></a><a class="nav-link" href="analytics.html"><svg viewBox="0 0 24 24">
+                        <path d="M4 19V5M4 19h17M7 15l3-4 3 2 5-7" />
+                    </svg><span>Analytics</span></a><a class="nav-link" href="goals.html"><svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8" />
+                        <circle cx="12" cy="12" r="4" />
+                    </svg><span>Goals</span></a><a class="nav-link" href="habits.html"><svg viewBox="0 0 24 24">
+                        <path d="M12 21a8 8 0 1 1 8-8c0 4-2 7-6 8M12 17v-5l3-3" />
+                    </svg><span>Habits</span></a></nav>
+        </aside>
+        <main class="app-content">
+            <header class="topbar">
+                <div>
+                    <div class="time-date">
+                        <p id="current-date" class="greeting"></p>
+                        <p id="current-time" class="greeting"></p>
+                    </div>
+                    <p class="greeting">Turn plans into progress</p>
+                    <h1 class="page-title">Tasks</h1>
+                    <p class="page-subtitle">Keep the important work visible and moving.</p>
+                </div><button class="button-primary">＋ Add task</button>
+            </header>
+            <section class="status-strip route-status">
+                <div class="status-copy"><span class="status-indicator"></span><span><strong>You're on track
+                            today</strong><small>Prioritize the proposal before your afternoon workout.</small></span>
+                </div>
+                <div class="daily-progress">
+                    <div><span>Tasks complete</span><b>67%</b></div>
+                    <div class="progress progress-light"><span class="width-68"></span></div>
+                </div><span class="pill orange">3 priority tasks</span>
+            </section>
+            <section class="panel">
+                <div class="section-heading">
+                    <div><span class="section-kicker">Today · Monday, Sep 5</span>
+                        <h2>Today's tasks <span class="pill orange">4 tasks</span></h2>
+                    </div><span class="muted-link">67% complete</span>
+                </div>
+                <div class="task-list"><label class="task-row done"><input type="checkbox" checked><span>Review weekly
+                            priorities</span><small class="task-time">09:00 · Planning</small></label><label
+                        class="task-row"><input type="checkbox"><span>Finish project proposal</span><small
+                            class="task-time">11:30 · Work</small></label><label class="task-row"><input
+                            type="checkbox"><span>30 minute workout</span><small class="task-time">17:00 ·
+                            Health</small></label><label class="task-row"><input type="checkbox"><span>Plan
+                            tomorrow</span><small class="task-time">20:30 · Personal</small></label></div>
+            </section>
+            <section class="tasks-dashboard-grid">
+                <article class="panel task-summary-card">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Execution</span>
+                            <h2>Today's progress</h2>
+                        </div><span class="trend up">On track</span>
+                    </div>
+                    <div class="task-score"><strong>67%</strong>
+                        <div class="progress"><span class="width-68"></span></div><small>8 of 12 tasks complete</small>
+                    </div>
+                    <div class="task-summary-stats">
+                        <span><b>4</b><small>Remaining</small></span><span><b>2h</b><small>Estimated</small></span><span><b>3</b><small>Priority</small></span>
+                    </div>
+                </article>
+                <article class="panel priority-card-panel">
+                    <div class="section-heading">
+                        <div><span class="section-kicker">Attention</span>
+                            <h2>Priority breakdown</h2>
+                        </div>
+                    </div>
+                    <div class="priority-bars">
+                        <div><span>High</span><i><b class="width-82"></b></i><strong>3</strong></div>
+                        <div><span>Medium</span><i><b class="width-58"></b></i><strong>5</strong></div>
+                        <div><span>Low</span><i><b class="width-34"></b></i><strong>4</strong></div>
+                    </div>
+                    <div class="task-legend"><span><i class="dot red"></i>Urgent today</span><span><i
+                                class="dot purple"></i>Planned</span></div>
+                </article>
+            </section>
+            <section class="panel task-board">
+                <div class="section-heading">
+                    <div><span class="section-kicker">Organize your work</span>
+                        <h2>Task board</h2>
+                    </div><span class="filter-button">All categories <svg viewBox="0 0 24 24">
+                            <path d="m7 10 5 5 5-5" />
+                        </svg></span>
+                </div>
+                <div class="task-columns">
+                    <div>
+                        <h3>To do <b>4</b></h3>
+                        <div class="board-task"><i class="priority high"></i><span>Finish project proposal<small>Work ·
+                                    Due 11:30</small></span><em>High</em></div>
+                        <div class="board-task"><i class="priority medium"></i><span>Reply to project notes<small>Admin
+                                    · Due 13:00</small></span><em>Medium</em></div>
+                    </div>
+                    <div>
+                        <h3>In progress <b>2</b></h3>
+                        <div class="board-task"><i class="priority high"></i><span>Review weekly
+                                priorities<small>Planning · Due 09:00</small></span><em>High</em></div>
+                        <div class="board-task"><i class="priority low"></i><span>Prepare reading list<small>Study · Due
+                                    16:00</small></span><em>Low</em></div>
+                    </div>
+                    <div>
+                        <h3>Completed <b>6</b></h3>
+                        <div class="board-task completed-task"><i></i><span>Morning review<small>Planning ·
+                                    Completed</small></span><em>Done</em></div>
+                        <div class="board-task completed-task"><i></i><span>Inbox zero<small>Admin ·
+                                    Completed</small></span><em>Done</em></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
