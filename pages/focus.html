@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Focus | TimeFlow</title>
+</head>
+
+<body class="app-body">
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="dashboard.html"><img src="../images/logo.png"
+                    alt="TimeFlow"><span>TimeFlow</span></a>
+            <div class="nav-label">Workspace</div>
+            <nav class="app-nav"><a class="nav-link" href="dashboard.html"><span>⌂</span><span>Dashboard</span></a><a
+                    class="nav-link" href="schedule.html"><span>◷</span><span>Schedule</span></a><a class="nav-link"
+                    href="tasks.html"><span>✓</span><span>Tasks</span></a><a class="nav-link active"
+                    href="focus.html"><span>◉</span><span>Focus</span></a><a class="nav-link"
+                    href="analytics.html"><span>◌</span><span>Analytics</span></a><a class="nav-link"
+                    href="goals.html"><span>↗</span><span>Goals</span></a><a class="nav-link"
+                    href="habits.html"><span>⌁</span><span>Habits</span></a></nav>
+        </aside>
+        <main class="app-content">
+            <header class="topbar">
+                <div>
+                    <p class="greeting">A quiet space for meaningful work</p>
+                    <h1 class="page-title">Focus timer</h1>
+                </div>
+            </header>
+            <div class="page-grid">
+                <section class="panel">
+                    <div class="section-heading">
+                        <h2>Project proposal</h2><span class="pill orange">Deep work</span>
+                    </div>
+                    <div class="focus-display" data-timer>25:00</div>
+                    <div class="focus-controls"><button class="button-primary" data-timer-start>Start
+                            focus</button><button class="button-secondary" data-timer-reset>Reset</button></div>
+                </section>
+                <section class="panel">
+                    <div class="section-heading">
+                        <h2>Today's focus</h2>
+                    </div>
+                    <div class="stat-value">3h 40m</div>
+                    <p class="stat-detail">You've completed 2 focus sessions today.</p>
+                    <div class="progress focus-progress"><span></span></div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

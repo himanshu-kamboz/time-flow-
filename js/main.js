@@ -58,7 +58,6 @@ function saveInformation (){
 
     localStorage.setItem("user", JSON.stringify(user));
 
-    console.log("saved info", user)
 }
 
 let dashboardBtn = document.getElementById("dashboard-btn");
@@ -66,9 +65,19 @@ let dashboardBtn = document.getElementById("dashboard-btn");
 if (dashboardBtn) {
     dashboardBtn.addEventListener("click", function (event) {
         event.preventDefault();
-
         saveInformation();
-
         window.location.href = "./pages/dashboard.html";
     });
 }
+
+const storedUser = JSON.parse(localStorage.getItem('user') || '{}');
+document.querySelectorAll('[data-user-name]').forEach((element) => { element.textContent = storedUser.name || 'there'; });
+document.querySelectorAll('[data-user-initials]').forEach((element) => { element.textContent = (storedUser.name || 'TF').split(' ').map((part) => part[0]).join('').slice(0, 2).toUpperCase(); });
+document.querySelectorAll('.task-row input').forEach((checkbox) => { checkbox.addEventListener('change', () => checkbox.closest('.task-row').classList.toggle('done', checkbox.checked)); });
+let timerInterval;
+let timerSeconds = 25 * 60;
+const timerDisplay = document.querySelector('[data-timer]');
+function renderTimer() { if (timerDisplay) timerDisplay.textContent = `${String(Math.floor(timerSeconds / 60)).padStart(2, '0')}:${String(timerSeconds % 60).padStart(2, '0')}`; }
+document.querySelector('[data-timer-start]')?.addEventListener('click', (event) => { if (timerInterval) { clearInterval(timerInterval); timerInterval = null; event.currentTarget.textContent = 'Start focus'; return; } event.currentTarget.textContent = 'Pause'; timerInterval = setInterval(() => { timerSeconds = Math.max(0, timerSeconds - 1); renderTimer(); if (!timerSeconds) clearInterval(timerInterval); }, 1000); });
+document.querySelector('[data-timer-reset]')?.addEventListener('click', () => { clearInterval(timerInterval); timerInterval = null; timerSeconds = 25 * 60; renderTimer(); });
+renderTimer();
