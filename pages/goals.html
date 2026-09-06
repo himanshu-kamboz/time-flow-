@@ -50,25 +50,14 @@
                     </div>
                     <p class="greeting">Keep the bigger picture close</p>
                     <h1 class="page-title">Goals</h1>
-                </div><button class="button-primary">＋ New goal</button>
+                </div><button class="button-primary" data-add-goal>＋ New goal</button>
             </header>
             <section class="grid grid-2">
                 <div class="panel">
                     <div class="section-heading">
-                        <h2>Active goals</h2><span class="pill orange">3 active</span>
+                        <h2>Active goals</h2><span class="pill orange" data-active-goals>0 active</span>
                     </div>
-                    <div class="goal-item"><strong>Ship portfolio project</strong>
-                        <div class="progress width-68"><span></span></div>
-                        <div class="goal-meta"><span>68% complete</span><span>Due Oct 12</span></div>
-                    </div>
-                    <div class="goal-item"><strong>Read 12 books</strong>
-                        <div class="progress width-42"><span></span></div>
-                        <div class="goal-meta"><span>5 of 12 books</span><span>Due Dec 31</span></div>
-                    </div>
-                    <div class="goal-item"><strong>Build a consistent routine</strong>
-                        <div class="progress width-76"><span></span></div>
-                        <div class="goal-meta"><span>23 of 30 days</span><span>Due Sep 30</span></div>
-                    </div>
+                    <div data-goals-list></div>
                 </div>
                 <div class="panel">
                     <div class="section-heading">
@@ -92,7 +81,7 @@
                         </div><span class="pill purple-pill">In progress</span>
                     </div>
                     <div class="goal-hero">
-                        <div class="goal-hero-ring"><strong>68%</strong></div>
+                        <div class="goal-hero-ring"><strong data-featured-goal-score>0%</strong></div>
                         <div>
                             <p>Make meaningful progress every week and publish a polished body of work.</p><span>12 of
                                 18 milestones complete</span>

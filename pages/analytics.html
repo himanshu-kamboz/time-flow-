@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
     <title>Analytics | TimeFlow</title>
 </head>
 
@@ -54,37 +55,32 @@
             </header>
             <section class="grid grid-3 stats-grid">
                 <div class="stat-card"><span class="stat-label">Focus time</span>
-                    <div class="stat-value">18h 25m</div><span class="stat-detail">↑ 12% this week</span>
+                    <div class="stat-value" data-analytics-focus>0h</div><span class="stat-detail">Recorded focus time</span>
                 </div>
                 <div class="stat-card"><span class="stat-label">Completion rate</span>
-                    <div class="stat-value">82%</div><span class="stat-detail">↑ 6% this week</span>
+                    <div class="stat-value" data-analytics-completion>0%</div><span class="stat-detail">Tasks completed</span>
                 </div>
                 <div class="stat-card"><span class="stat-label">Deep work sessions</span>
-                    <div class="stat-value">14</div><span class="stat-detail">2 more than last week</span>
+                    <div class="stat-value" data-analytics-sessions>0</div><span class="stat-detail">Completed sessions</span>
                 </div>
             </section>
             <section class="panel">
                 <div class="section-heading">
-                    <h2>Focus time this week</h2><span class="pill">18h 25m total</span>
+                    <h2>Focus time this week</h2><span class="pill" data-analytics-focus-total>0h total</span>
                 </div>
-                <div class="chart"><i class="bar width-48"></i><i class="bar width-70"></i><i
-                        class="bar highlight width-86"></i><i class="bar width-62"></i><i class="bar width-78"></i><i
-                        class="bar width-55"></i><i class="bar width-34"></i></div>
-                <div class="chart-labels">
-                    <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
-                </div>
+                <div class="chart-canvas-wrap"><canvas id="analytics-focus-chart" role="img" aria-label="Focus time by day"></canvas><p class="chart-empty">Complete a focus session to see your analytics.</p></div>
             </section>
             <section class="analytics-grid">
                 <article class="panel analytics-score">
                     <div class="section-heading">
                         <div><span class="section-kicker">Your signal</span>
                             <h2>Productivity score</h2>
-                        </div><span class="trend up">+14.6%</span>
+                        </div><span class="trend up" data-analytics-trend>Live data</span>
                     </div>
-                    <div class="score-ring"><strong>8.6</strong><small>out of 10</small></div>
-                    <p>You're performing above your weekly average.</p>
+                    <div class="score-ring"><strong data-productivity-score>0</strong><small>out of 10</small></div>
+                    <p data-productivity-message>Use TimeFlow to build your productivity signal.</p>
                     <div class="score-meta">
-                        <span><b>82%</b><small>Consistency</small></span><span><b>14</b><small>Sessions</small></span><span><b>6d</b><small>Best
+                        <span><b data-analytics-consistency>0%</b><small>Consistency</small></span><span><b data-analytics-score-sessions>0</b><small>Sessions</small></span><span><b data-analytics-best-streak>0d</b><small>Best
                                 streak</small></span>
                     </div>
                 </article>
@@ -94,30 +90,19 @@
                             <h2>Daily productivity</h2>
                         </div><span class="pill">This week</span>
                     </div>
-                    <div class="mini-line-chart">
-                        <div class="mini-line-grid"><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 520 150"
-                            preserveAspectRatio="none">
-                            <path class="chart-area"
-                                d="M0 118 C40 112 62 78 92 92 S145 58 182 75 S220 40 260 58 S315 70 350 47 S405 68 445 34 S485 45 520 20 L520 150 L0 150Z" />
-                            <path class="chart-line"
-                                d="M0 118 C40 112 62 78 92 92 S145 58 182 75 S220 40 260 58 S315 70 350 47 S405 68 445 34 S485 45 520 20" />
-                        </svg>
-                        <div class="mini-line-labels">
-                            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
-                        </div>
-                    </div>
+                    <div class="chart-canvas-wrap"><canvas id="analytics-productivity-chart" role="img" aria-label="Daily productivity score"></canvas></div>
                 </article>
                 <article class="panel analytics-breakdown">
                     <div class="section-heading">
                         <div><span class="section-kicker">Efficiency</span>
                             <h2>Focus efficiency</h2>
                         </div>
-                    </div><strong class="big-stat">84<span>%</span></strong><span class="trend up">↑ 9% from last
+                    </div><strong class="big-stat" data-efficiency-score>0<span>%</span></strong><span class="trend up">Calculated from focus sessions
                         week</span>
-                    <div class="efficiency-bars"><span class="efficiency-deep"><i>Deep work</i><b>82%</b></span><span
-                            class="efficiency-planning"><i>Planning</i><b>68%</b></span><span
-                            class="efficiency-admin"><i>Admin</i><b>54%</b></span><span
-                            class="efficiency-study"><i>Study</i><b>74%</b></span></div>
+                        <div class="efficiency-bars"><span class="efficiency-deep"><i>Deep work</i><b data-efficiency="deep">0%</b></span><span
+                                class="efficiency-planning"><i>Planning</i><b data-efficiency="planning">0%</b></span><span
+                                class="efficiency-admin"><i>Admin</i><b data-efficiency="admin">0%</b></span><span
+                                class="efficiency-study"><i>Study</i><b data-efficiency="study">0%</b></span></div>
                 </article>
                 <article class="panel analytics-heat">
                     <div class="section-heading">

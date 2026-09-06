@@ -49,22 +49,22 @@
                         <p id="current-time" class="greeting"></p>
                     </div>
                     <h1 class="page-title">Schedule</h1>
-                </div><button class="button-primary">＋ Add block</button>
+                </div><button class="button-primary" data-add-schedule>＋ Add block</button>
             </header>
             <section class="status-strip route-status">
                 <div class="status-copy"><span class="status-indicator"></span><span><strong>5 blocks planned
                             today</strong><small>Your day has room for focus, recovery, and movement.</small></span>
                 </div>
                 <div class="daily-progress">
-                    <div><span>Schedule filled</span><b>68%</b></div>
-                    <div class="progress progress-light"><span class="width-68"></span></div>
-                </div><span class="pill">8h 30m planned</span>
+                    <div><span>Schedule filled</span><b>0%</b></div>
+                    <div class="progress progress-light"><span id="schedule-page-progress"></span></div>
+                </div><span class="pill" data-schedule-total>0h planned</span>
             </section>
             <section class="panel">
                 <div class="section-heading">
-                    <h2>Monday, September 5</h2><span class="pill">Today</span>
+                    <h2 data-schedule-date>Today</h2><span class="pill">Today</span>
                 </div>
-                <div class="timeline">
+                <div class="timeline" data-schedule-list>
                     <div class="timeline-row"><span class="timeline-time">07:00</span><i class="timeline-dot"></i>
                         <div class="timeline-event"><strong>Morning routine</strong><span>Start the day slowly</span>
                         </div>
@@ -89,7 +89,7 @@
                     <div class="section-heading">
                         <div><span class="section-kicker">Your day</span>
                             <h2>Schedule overview</h2>
-                        </div><span class="pill">5 blocks</span>
+                        </div><span class="pill" data-schedule-count>0 blocks</span>
                     </div>
                     <div class="day-track">
                         <div><b>07:00</b><i class="track-green"></i><span>Morning routine</span></div>
@@ -97,8 +97,8 @@
                         <div><b>12:30</b><i class="track-blue"></i><span>Lunch break</span></div>
                         <div><b>17:00</b><i class="track-amber"></i><span>Movement</span></div>
                     </div>
-                    <div class="schedule-footer"><span><b>8h 30m</b> planned</span><span><b>3h 40m</b>
-                            focused</span><span><b>68%</b> complete</span></div>
+                        <div class="schedule-footer"><span><b data-schedule-total>0h</b> planned</span><span><b data-schedule-focused>0h</b>
+                            focused</span><span><b data-schedule-completion>0%</b> complete</span></div>
                 </article>
                 <article class="panel calendar-card">
                     <div class="section-heading">
@@ -119,7 +119,7 @@
                 <div class="section-heading">
                     <div><span class="section-kicker">Planning horizon</span>
                         <h2>This week</h2>
-                    </div><span class="muted-link">18h 25m scheduled</span>
+                    </div><span class="muted-link" data-schedule-week-total>0h scheduled</span>
                 </div>
                 <div class="week-days">
                     <div><small>Mon</small><b>5</b><em class="today-dot"></em></div>

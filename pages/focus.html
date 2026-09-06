@@ -55,9 +55,9 @@
                 <div class="status-copy"><span class="status-indicator"></span><span><strong>Ready for a focused
                             block</strong><small>Your next session is queued and distraction-free.</small></span></div>
                 <div class="daily-progress">
-                    <div><span>Focus target</span><b>64%</b></div>
-                    <div class="progress progress-light"><span class="width-64"></span></div>
-                </div><span class="pill purple-pill">14 sessions this week</span>
+                    <div><span>Focus target</span><b data-focus-progress>0%</b></div>
+                    <div class="progress progress-light"><span id="focus-page-progress"></span></div>
+                </div><span class="pill purple-pill" data-focus-sessions>0 sessions this week</span>
             </section>
             <div class="page-grid">
                 <section class="panel">
@@ -72,9 +72,9 @@
                     <div class="section-heading">
                         <h2>Today's focus</h2>
                     </div>
-                    <div class="stat-value">3h 40m</div>
-                    <p class="stat-detail">You've completed 2 focus sessions today.</p>
-                    <div class="progress focus-progress"><span></span></div>
+                    <div class="stat-value" data-focus-total>0h</div>
+                    <p class="stat-detail" data-focus-summary>Complete a focus session to see your progress.</p>
+                    <div class="progress focus-progress"><span id="focus-page-today-progress"></span></div>
                 </section>
             </div>
             <section class="focus-dashboard-grid">
@@ -98,14 +98,14 @@
                         </div>
                     </div>
                     <div class="insight-row"><span class="metric-icon icon-lilac">◷</span>
-                        <div><b>12h 40m</b><small>Total this week</small></div><span class="trend up">+20%</span>
+                        <div><b data-focus-insight-total>0h</b><small>Total this week</small></div><span class="trend up">Recorded</span>
                     </div>
                     <div class="insight-row"><span class="metric-icon icon-blue">◌</span>
-                        <div><b>14 sessions</b><small>Completed this week</small></div><span class="trend up">+3</span>
+                        <div><b data-focus-insight-sessions>0 sessions</b><small>Completed this week</small></div><span class="trend up">Recorded</span>
                     </div>
                     <div class="insight-row"><span class="metric-icon icon-amber">✦</span>
-                        <div><b>54 minutes</b><small>Average session</small></div><span
-                            class="trend neutral">Typical</span>
+                        <div><b data-focus-insight-average>0 minutes</b><small>Average session</small></div><span
+                            class="trend neutral">Actual</span>
                     </div>
                     <div class="focus-week-bars"><i class="b-55"></i><i class="b-72"></i><i class="b-88"></i><i
                             class="b-65"></i><i class="b-78"></i><i class="b-45"></i><i class="b-32"></i></div>

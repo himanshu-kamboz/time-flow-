@@ -49,31 +49,20 @@
                     </div>
                     <p class="greeting">Consistency compounds</p>
                     <h1 class="page-title">Habits</h1>
-                </div><button class="button-primary">＋ Add habit</button>
+                </div><button class="button-primary" data-add-habit>＋ Add habit</button>
             </header>
             <section class="panel">
                 <div class="section-heading">
-                    <h2>Daily habits</h2><span class="pill">6 day streak</span>
+                    <h2>Daily habits</h2><span class="pill" data-habit-streak>0 day streak</span>
                 </div>
-                <div class="habit-item"><strong>Morning movement</strong>
-                    <div class="progress width-86"><span></span></div>
-                    <div class="goal-meta"><span>6 day streak</span><span>Today complete</span></div>
-                </div>
-                <div class="habit-item"><strong>Read 20 minutes</strong>
-                    <div class="progress width-71"><span></span></div>
-                    <div class="goal-meta"><span>4 day streak</span><span>Today complete</span></div>
-                </div>
-                <div class="habit-item"><strong>Plan tomorrow</strong>
-                    <div class="progress width-57"><span></span></div>
-                    <div class="goal-meta"><span>3 day streak</span><span>Due tonight</span></div>
-                </div>
+                <div data-habits-list></div>
             </section>
             <section class="habits-dashboard-grid">
                 <article class="panel habit-week-card">
                     <div class="section-heading">
                         <div><span class="section-kicker">Weekly rhythm</span>
                             <h2>Habit consistency</h2>
-                        </div><span class="trend up">71% this week</span>
+                        </div><span class="trend up" data-habit-consistency>0% this week</span>
                     </div>
                     <div class="habit-calendar-head">
                         <span>Habit</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
@@ -97,8 +86,8 @@
                         <div class="streak-dots large"><i class="on"></i><i class="on"></i><i class="on"></i><i
                                 class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
                     </div>
-                    <div class="habit-stat"><span>Completion rate</span><b>71%</b></div>
-                    <div class="habit-stat"><span>Habits active</span><b>3</b></div>
+                    <div class="habit-stat"><span>Completion rate</span><b data-habit-rate>0%</b></div>
+                    <div class="habit-stat"><span>Habits active</span><b data-habit-count>0</b></div>
                 </article>
             </section>
         </main>
