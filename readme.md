@@ -46,14 +46,14 @@ TimeFlow/
 │
 ├── index.html
 ├── css/
-│   └── style.css
+│ └── style.css
 ├── js/
-│   └── main.js
+│ └── main.js
 ├── images/
-│   ├── logo.png
-│   └── favicon.png
+│ ├── logo.png
+│ └── favicon.png
 └── pages/
-    └── dashboard.html
+└── dashboard.html
 
 🚀 Getting Started
 
